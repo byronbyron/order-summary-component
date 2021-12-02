@@ -5,6 +5,7 @@
     --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
     --very-pale-blue: hsl(225, 100%, 98%);
+    --very-pale-blue-70: hsla(225, 100%, 98%, 0.7);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%)
 }
@@ -83,16 +84,16 @@ p {
 .card-text p {
     font-size: 0.9375rem;
     line-height: 1.6;
-    margin-bottom: 1.25rem
+    margin-bottom: 1.125rem
 }
 
 .plan {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1.875rem;
+    margin-bottom: 2rem;
     padding: 1rem;
-    background-color: var(--very-pale-blue);
+    background-color: var(--very-pale-blue-70);
     border-radius: 0.625rem;
     box-shadow: none
 }
@@ -104,7 +105,12 @@ p {
 
 .plan p {
     line-height: 1.5;
-    margin: 0
+    margin: 0;
+}
+
+.plan strong {
+    font-weight: 900;
+    color: var(--dark-blue);
 }
 
 .plan a {
@@ -123,7 +129,7 @@ p {
     display: inline-block;
     font-weight: 700;
     line-height: 1.5;
-    color: #212529;
+    color: var(--dark-blue);
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -144,7 +150,7 @@ p {
     color: #fff;
     background-color: var(--bright-blue);
     border-color: var(--bright-blue);
-    box-shadow: 0 0.75rem 2rem -0.5rem hsl(245deg 75% 52% / 50%)
+    box-shadow: 0 1rem 1.25rem hsl(245deg 75% 52% / 25%);
 }
 
 .btn-primary:hover,
@@ -160,7 +166,7 @@ p {
 
 .btn-link:hover,
 .btn-link:active {
-    color: #000
+    color: var(--dark-blue);
 }
 
 .d-grid {
@@ -172,7 +178,7 @@ p {
 }
 
 .flex-fill {
-    flex: 1 1 auto
+    flex: 1 1 auto;
 }
 
 .mr-3 {
@@ -181,10 +187,6 @@ p {
 
 .mb-4 {
     margin-bottom: 1.5rem
-}
-
-.text-black {
-    color: #000
 }
 
 .sr-only {
@@ -203,6 +205,7 @@ p {
     font-size: 11px;
     text-align: center;
     margin-bottom: 1rem;
+    display: none;
 }
 
 .attribution a {
@@ -224,6 +227,10 @@ p {
         max-width: 450px
     }
 
+    .card {
+        min-height: 697px;
+    }
+
     .card-body {
         padding: 3rem 3rem 2rem 3rem
     }
@@ -233,11 +240,17 @@ p {
     }
 
     .card-text p {
-        font-size: 1rem
+        font-size: 1rem;
+        line-height: 1.65;
     }
 
     .plan {
-        padding: 1.5rem
+        padding: 1.25rem 1.5rem 1.375rem;
+        min-height: 0;
+    }
+
+    .plan img {
+        margin-top: 4px
     }
 
     .plan p {
@@ -245,6 +258,6 @@ p {
     }
 
     .gap {
-        gap: 1rem
+        gap: 1.125rem
     }
 }
